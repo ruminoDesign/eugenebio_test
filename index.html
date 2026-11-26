@@ -86,8 +86,8 @@ img { display: block; }
 .label { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 22px; font-family: 'Inter', sans-serif; font-weight: 500;
   font-size: clamp(11px, 1.1vw, 14px); letter-spacing: .32em; color: #4a8a17; }
 .label::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--green); }
-.intro h2 { margin: 0 0 28px; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; letter-spacing: -.03em; line-height: 1.25; color: var(--dark); word-break: keep-all; }
-.intro h2 em { font-style: normal; color: var(--green); }
+.intro h2, .network h2 { margin: 0 0 28px; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; letter-spacing: -.03em; line-height: 1.25; color: var(--dark); word-break: keep-all; }
+.intro h2 em, .network h2 em { font-style: normal; color: var(--green); }
 .intro-desc { margin: 0; font-size: clamp(16px, 1.5vw, 20px); font-weight: 400; line-height: 1.85; color: #5b666c; word-break: keep-all; }
 
 .tiles { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); }
@@ -123,6 +123,12 @@ img { display: block; }
 .result b { display: block; font-family: 'Comfortaa', sans-serif; font-weight: 700; font-size: clamp(56px, 8vw, 110px); letter-spacing: -.04em; color: var(--dark); line-height: 1; }
 .result b small { font-family: 'Noto Sans KR', sans-serif; font-size: .42em; color: var(--green); margin-left: 6px; }
 .result span { display: block; margin-top: 14px; font-size: clamp(15px, 1.4vw, 18px); color: #5b666c; letter-spacing: .02em; }
+
+.network { padding: 0 clamp(16px, 4vw, 64px) clamp(80px, 10vw, 140px); }
+.network .intro-head { margin-bottom: clamp(32px, 5vw, 56px); }
+.map { max-width: 1440px; margin: 0 auto; border-radius: 24px; overflow: hidden; background: #050913; }
+.map img { width: 100%; height: auto; }
+@media (max-width: 860px) { .map { border-radius: 18px; } }
 
 /* scroll reveal */
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
@@ -362,6 +368,18 @@ img { display: block; }
       <b>256<small>억</small></b>
       <span>2025년 매출 · 협력과 전문성이 함께 만든 성과</span>
     </div>
+  </section>
+
+  <!-- GLOBAL NETWORK MAP -->
+  <section class="network" id="network">
+    <div class="intro-head reveal">
+      <p class="label">GLOBAL NETWORK</p>
+      <h2>세계의 파트너와 <em>함께</em>합니다.</h2>
+    </div>
+    <figure class="map reveal">
+      <img src="world_map_anime.gif" width="1400" height="747" loading="lazy"
+           alt="유진바이오 글로벌 네트워크 지도: 한국에서 영국, 독일, 스페인, 이탈리아, 미국, 캐나다로 연결">
+    </figure>
   </section>
 </main>
 
